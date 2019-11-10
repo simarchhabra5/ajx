@@ -77,13 +77,31 @@ count = 2;
       
       var myObj = JSON.parse(this.responseText);
       console.log(myObj);
+      if(!clearTable()){
+
+       
       document.getElementById("para").innerHTML = JSON.stringify(myObj.data[count]);
-  
+      let table = document.querySelector("table");
+      let data = Object.keys(myObj.data[count]);
+      let data1= Object.values(myObj.data[count]);
+
+       
+   
+      // document.getElementById("table1").innerHTML==" ";
     
+      console.log(data1);
+      console.log("DAta" +data);
+      generateTableRow(table, data1);
+ 
+      var removeTab = document.getElementById('table1');
+    
+       }
 
+       else{
+         clearTable();
+       }
 
-
-
+       
 
     }
   };
@@ -109,3 +127,32 @@ var stProm = new Promise(
 
   
 }
+
+function generateTableRow(table, data) {
+  let thead = table.createTHead();
+  let row = thead.insertRow();
+  for (let value of data) {
+    let tr = document.createElement("tr");
+    let text = document.createTextNode(value);
+    tr.appendChild(text);
+    row.appendChild(tr);
+  }
+}
+
+
+
+function clearTable()
+{
+ var tableRef = document.getElementById('table1');
+ while ( tableRef.rows.length > 0 )
+ {
+  tableRef.deleteRow(0);
+ }
+}
+
+
+
+
+
+
+

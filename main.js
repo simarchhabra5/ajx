@@ -80,7 +80,7 @@ count = 2;
       if(!clearTable()){
 
        
-      document.getElementById("para").innerHTML = JSON.stringify(myObj.data[count]);
+      // document.getElementById("para").innerHTML = JSON.stringify(myObj.data[count]);
       let table = document.querySelector("table");
       let data = Object.keys(myObj.data[count]);
       let data1= Object.values(myObj.data[count]);

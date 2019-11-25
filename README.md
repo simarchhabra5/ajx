@@ -1,4 +1,3 @@
-# assignment-7-simarchhabra2601
 
 Stock Data Display Using Ajax for getting the request from the server. Used RXJs for event listeners.
 
@@ -6,5 +5,5 @@ In this the user will be given the option to type the stock which he wants to se
 
 On submitting the data will be fetched from server and displayed to user.
 
-Submitted By :Simarjeet Chhabra
-001402447
+To run do npm install and then npm run 
+
